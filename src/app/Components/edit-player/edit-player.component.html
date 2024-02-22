@@ -1,0 +1,32 @@
+<app-banner title="Edit Player"></app-banner>
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form #editPlayerForm="ngForm" (ngSubmit)="editPlayer()">
+            <div class="form-group">
+              <input type="text" name="name" [(ngModel)]="Playere.name" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="number"name="age" [(ngModel)]="Playere.age" class="form-control" placeholder="Age">
+            </div>
+            <div class="form-group">
+              <input type="text" name="position" [(ngModel)]="Playere.position" class="form-control" placeholder="Position">
+            </div>
+            <div class="form-group">
+                <input type="number" name="number" [(ngModel)]="Playere.number" class="form-control" placeholder="Number">
+              </div>
+              <div class="form-group">
+                <input type="file" name="img" [(ngModel)]="Playere.image" class="form-control" >
+              </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5" value="Edit">
+            </div>
+          </form>  
+        </div>
+       
+      </div>
+    </div>
+  </div>
+

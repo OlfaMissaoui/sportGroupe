@@ -1,0 +1,18 @@
+<div class="col-lg-6 " style="margin-top: 10px; margin-bottom: 10px;">
+    <div class="custom-media d-flex">
+      <div class="img mr-4">
+        <!-- <img src="{{play.img}}"  alt="Image" class="img-fluid"> -->
+        <img src="assets/images/img_1.jpg"  alt="Image" class="img-fluid">
+      </div>
+      <div class="text">
+       <h3>Name: <span > {{play.name}} </span></h3> 
+        <h3 class="mb-4" >Age:{{play.age}}</h3>
+        <h3 class="mb-4"><a href="#">Position:{{play.position}} </a></h3>
+        <h3 class="mb-4"><a href="#">Nbre:{{play.number}}</a></h3>
+      </div>
+    </div>
+  </div> 
+  <div class="text-center mt-3">
+    <button class="btn-danger" (click)="delete(play.id)"> Delete</button>
+  </div>
+ 

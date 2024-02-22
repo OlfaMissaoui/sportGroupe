@@ -1,0 +1,16 @@
+<app-banner title="allMatches"></app-banner>
+<div class="container">
+
+  <div class="row">
+    
+ <div class="col-md-12" *ngFor="let m of matchesTab">
+   <app-score [X]="m"(newMatches)="update($event)" ></app-score>
+ </div>
+</div>
+</div>
+
+           
+      
+         
+       
+ 

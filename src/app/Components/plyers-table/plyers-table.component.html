@@ -1,0 +1,40 @@
+<div class="widget-next-match">
+  <form>
+    <div class="text-center">
+    <label for="">Filter By team One</label>
+    <input type="text" [(ngModel)]='term' [ngModelOptions]="{standalone: 
+   true}">
+    </div>
+   </form>
+    <table class="table custom-table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <!-- <th>Image</th> -->
+          <th>Name</th>
+          <th>Age</th>
+          <th>Position</th>
+          <th>Number</th>
+          <th>Actions</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let elt of players | filterPlayer:term">
+          <td>{{elt._id}}</td>
+          <!-- <td> <img src={{elt.img}} alt="" style="width: 50px;"></td> -->
+          <td><strong class="text-white">{{elt.name}}</strong></td>
+          <td><strong class="text-white">{{elt.age}}</strong></td>
+          <td>{{elt.position}}</td>
+          <td>{{elt.number}}</td>
+          <td>
+            <button type="button" class="btn btn-success"(click)="display(elt._id)">Display</button>
+            <button type="button" class="btn btn-warning"(click)="edit(elt._id)">Edit</button>
+            <button type="button" class="btn btn-danger"(click)="delete(elt._id)">Delete</button>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+

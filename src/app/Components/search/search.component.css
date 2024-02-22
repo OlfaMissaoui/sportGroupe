@@ -1,0 +1,22 @@
+.card{
+    width: 70%;
+    text-align: center;
+    right: -120px;
+    border-color: black;
+    background-color: beige;
+    height: 55px;
+}
+input{
+    font-style: normal;
+    margin-left: 4px;
+    margin-top: 5px;
+
+    
+
+}
+button{
+    margin-left: 400px  ;
+margin-right: 5px;
+    margin-top: 5px;
+
+}

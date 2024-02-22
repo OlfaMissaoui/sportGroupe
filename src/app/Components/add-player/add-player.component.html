@@ -1,0 +1,45 @@
+<app-banner title="ADD Player"></app-banner>
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form #playerForm="ngForm" (ngSubmit)="addPlayer()">
+            <div class="form-group">
+              <input type="text" name="name" [(ngModel)]="playere.name" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="number"name="age" [(ngModel)]="playere.age" class="form-control" placeholder="Age">
+            </div>
+            <div class="form-group">
+              <input type="text" name="position" [(ngModel)]="playere.position" class="form-control" placeholder="Position">
+            </div>
+            <div class="form-group">
+                <input type="number" name="number" [(ngModel)]="playere.number" class="form-control" placeholder="Number">
+            </div>
+
+              <!-- <div class="form-group" style="visibility: hidden;">
+                <input type="file" class="form-control" #filePic (change)="onImageSelected($event)">
+              </div> -->
+              <!-- <div class="text-center ">
+                <button class="btn btn-info" (click)="filePic.click()">Select Avatar player</button>
+              </div>
+              <img [src]="image" alt="" > -->
+
+                 
+              <div class="form-group">
+                <select name="" id="teamId" class="form-control" (change)="selectteamId($event)">
+                <option *ngFor="let t of teams" [value]="t._id" style="color: black;">
+                 {{t.name}}
+                </option>
+                </select>
+                </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5" value="Add Player">
+            </div>
+          </form>  
+        </div>
+       
+      </div>
+    </div>
+  </div>

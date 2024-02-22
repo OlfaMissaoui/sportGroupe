@@ -1,0 +1,65 @@
+<app-banner title="Edit Profile"></app-banner>
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form #profileForm="ngForm" (ngSubmit)="editProfile()" >
+            <div class="form-group">
+              <input type="text" name="firstName" [(ngModel)]="profile.firstName" class="form-control" placeholder="First Name"  readonly>
+            </div>
+           
+            <div class="form-group">
+              <input type="text" name="lastName" [(ngModel)]="profile.lastName" class="form-control" placeholder="Last Name" readonly>
+            </div>
+           
+            <span style="color: red;">{{msgError}} </span>
+            <div class="form-group">
+              <input type="email"name="email" [(ngModel)]="profile.email" class="form-control" placeholder="Email" readonly>
+            </div>
+         
+         
+            <div class="form-group">
+                <input type="password" name="oldPassword" [(ngModel)]="profile.oldPassword" class="form-control" placeholder="Old Password">
+              </div>
+              <div class="form-group">
+                <input type="password" name="newPassword" [(ngModel)]="profile.newPassword" class="form-control" placeholder="New Password">
+              </div>
+              <!-- <div *ngIf="ngForm.controls['newPassword'].invalid && (profileForm.controls['newPassword'].touched || profileForm.controls['password'].dirty)">
+                <div *ngIf="ngForm.controls['newPassword'].errors.required" style="color: red;">
+                  password is required
+                </div>
+                <div *ngIf="ngForm.controls['newPassword'].errors.minlength" style="color: red;">
+                  password must have at least 6 chars
+                </div>
+                <div *ngIf="ngForm.controls['newPassword'].errors.maxlength" style="color: red;">
+                  password must have at most 12 chars
+                </div>
+                <div *ngIf="ngForm.controls['newPassword'].errors.pattern" style="color: red;">
+                  password must have at last caracter
+                </div> 
+              </div> -->
+
+
+
+
+              <!-- <div class="form-group" style="visibility: hidden;">
+                <input type="file" class="form-control" #filePic (change)="onImageSelected($event)">
+              </div>
+              <div class="text-center ">
+                <button class="btn btn-info" (click)="filePic.click()">Select Your Avatar</button>
+              </div>
+              <div class="text-center mt-4">
+                 <img [src]="image" alt="" width="200px">
+              </div> -->
+             
+            <div class="form-group text-center mt-4">
+              <input type="submit" class="btn btn-primary py-3 px-5" value="Edit Profile">
+            </div>
+          </form>  
+        </div>
+       
+      </div>
+    </div>
+
+</div>

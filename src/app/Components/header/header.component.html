@@ -1,0 +1,58 @@
+<header class="site-navbar py-4" role="banner">
+
+    <div class="container">
+      <div class="d-flex align-items-center">
+        <div class="site-logo">
+          <a href="index.html">
+            <img src="assets/images/logo.png" alt="Logo">
+          </a>
+        </div>
+        <div class="ml-auto">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              <li class="active"><a href="index.html" class="nav-link">Home</a></li>
+              <li><a routerLink="allMatches" class="nav-link">Matches</a></li>
+              <li><a routerLink="Players" class="nav-link">Players</a></li>
+              <li><a routerLink="teams" class="nav-link">Teams</a></li>
+              <li>
+                <div class="dropdown">
+                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown 
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" routerLink="addMatch">Add Match</a>
+                    <a class="dropdown-item" routerLink="addPlayer">Add Player</a>
+                    <a class="dropdown-item" routerLink="addTeam">Add Team</a>
+                    <a class="dropdown-item" routerLink="admin">Admin</a>
+                    
+                  </div>
+                </div>
+              </li>
+              <li><a routerLink="ourBlogs" class="nav-link">Blogs</a></li>
+              <li><a routerLink="contact.html" class="nav-link">Contact</a></li>
+              <!-- <li><a routerLink="Signin" class="nav-link">Login</a></li>
+              <li><a routerLink="subscription" class="nav-link">Signup</a></li> -->
+              <li><a routerLink="profile" class="nav-link">Profile</a></li>
+            
+               <!-- ... autres balises HTML ... -->
+
+               <li><a *ngIf="!isLoggedIn" routerLink="signin" class="nav-link">Login</a></li>
+               <li><a routerLink="subscription" class="nav-link" *ngIf="!isLoggedIn">Signup</a></li>
+               <li><a class="nav-link" *ngIf="isLoggedIn">{{ name }}</a></li>
+               <li><a class="nav-link" *ngIf="isLoggedIn">{{ isLoggedIn }}</a></li>
+               <li><a routerLink="#"  (click)="logout()"
+                       class="nav-link" *ngIf="isLoggedIn">Logout</a></li>
+
+               <!-- ... autres balises HTML ... -->
+
+            </ul>
+          </nav>
+
+          <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white"><span
+              class="icon-menu h3 text-white"></span></a>
+        </div>
+      </div>
+    </div>
+   
+  </header>
